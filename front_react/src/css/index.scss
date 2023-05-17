@@ -15,11 +15,6 @@ header ul{
     align-items: center;
 }
 
-header ul li:hover{
-    letter-spacing: 0.3vw;
-    color: #ca6767;
-}
-
 header ul img{
     height: clamp(20px, calc((61 / 1440) * 100vw), 61px) ;
     width: clamp(50px, calc((178 / 1440) * 100vw), 178px) ;
