@@ -1,0 +1,328 @@
+//
+//
+// HEADER
+//
+//
+header{
+    background: black;
+    width: clamp(300px, calc((1440 / 1440) * 100vw), 1440px) ;
+    padding: clamp(2px, calc((18 / 1440) * 100vw), 18px) clamp(2px, calc((87 / 1440) * 100vw), 87px) clamp(2px, calc((12 / 1440) * 100vw), 12px) clamp(2px, calc((28 / 1440) * 100vw), 28px) ;
+}
+
+header ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header ul li:hover{
+    letter-spacing: 0.3vw;
+    color: #ca6767;
+}
+
+header ul img{
+    height: clamp(20px, calc((61 / 1440) * 100vw), 61px) ;
+    width: clamp(50px, calc((178 / 1440) * 100vw), 178px) ;
+}
+//
+//
+// FRAME
+//
+//
+.frame{
+    display: flex;
+}
+//
+//
+// SIDEBARE
+//
+//
+.sidebare{
+    background: black;
+    width: clamp(40px, calc((117 / 1440) * 100vw), 117px) ;
+    height: clamp(20px, calc((933 / 1440) * 100vw), 933px);
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+
+}
+
+.sidebare ul{
+    background: black;
+    margin-top: clamp(20px, calc((240 / 1440) * 100vw), 240px) ;
+    gap: clamp(1px, calc((20 / 1440) * 100vw), 20px);
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.sidebare .copiryght{
+    position: absolute;
+    width: clamp(40px, calc((160 / 1440) * 100vw), 160px);
+    bottom: clamp(40px, calc((122 / 1440) * 100vw), 122px);
+    transform: rotate(270deg);
+}
+
+.sidebare ul img{
+    height: clamp(10px, calc((64 / 1440) * 100vw), 64px) ;
+    width: clamp(10px, calc((64 / 1440) * 100vw), 64px) ;
+}
+//
+//
+// MAIN
+//
+//
+.main{
+    height: clamp(20px, calc((933 / 1440) * 100vw), 933px) ;
+    width: clamp(40px, calc((1323 / 1440) * 100vw), 1323px) ; 
+    background: white;
+    padding: 
+    clamp(2px, calc((68 / 1440) * 100vw), 68px) 
+    clamp(2px, calc((90 / 1440) * 100vw), 90px) 
+    clamp(2px, calc((86 / 1440) * 100vw), 86px) 
+    clamp(2px, calc((107 / 1440) * 100vw), 107px);
+}
+//
+//
+// HOME
+//
+//
+.home{
+    @extend %center;
+    gap: clamp(1px, calc((20 / 1440) * 100vw), 20px);
+}
+
+//
+//
+// BUTTON
+//
+//
+.button{
+    height: clamp(10px, calc((80 / 1440) * 100vw), 80px) ;
+    width: clamp(10px, calc((220 / 1440) * 100vw), 220px) ; 
+    background: #FF0101;
+    border: 4px solid black;
+    border-radius: 10px;
+    color: white;
+}
+//
+//
+// BOXDIET
+//
+//
+.boxdiet{
+    height: clamp(50px, calc((124 / 1440) * 100vw), 124px) ;
+    width: clamp(200px, calc((258 / 1440) * 100vw), 258px) ; 
+    background: #FBFBFB;
+    color: black;
+    display: flex;
+    align-items: center;
+    gap: clamp(2px, calc((24 / 1440) * 100vw), 24px);
+}
+
+.boxdiet img{
+    height: clamp(10px, calc((60 / 1440) * 100vw), 60px) ;
+    width: clamp(10px, calc((60 / 1440) * 100vw), 60px) ; 
+    margin-left: clamp(50px, calc((32 / 1440) * 100vw), 32px) ;
+}
+.boxdiet .title{
+    display: flex;
+    flex-direction: column;
+}
+//
+//
+// DASHBORD
+//
+//
+.dashbord{
+    display: grid;
+grid-template-columns: repeat(3, 1fr);
+grid-template-rows: repeat(3, 1fr);
+grid-column-gap: 0px;
+grid-row-gap: 0px;
+}
+
+.dashbord .title { grid-area: 1 / 1 / 2 / 4;}
+
+.dashbord .barchart { 
+    grid-area: 2 / 1 / 3 / 3; 
+    width: clamp(200px, calc((835 / 1440) * 100vw), 835px);
+    height: clamp(50px, calc((320 / 1440) * 100vw), 320px) ;
+    margin-top: clamp(10px, calc((77 / 1440) * 100vw), 77px) ;
+    background: #FBFBFB;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.0212249);
+    border-radius: clamp(1px, calc((5 / 1440) * 100vw), 5px);
+}
+
+.dashbord .sec3 { 
+    grid-area: 3 / 1 / 4 / 3;
+    width: clamp(200px, calc((835 / 1440) * 100vw), 835px);
+    height: clamp(50px, calc((263 / 1440) * 100vw), 263px) ;
+    margin-top: clamp(10px, calc((30 / 1440) * 100vw), 30px) ;
+    display: flex;
+    gap: clamp(10px, calc((30 / 1440) * 100vw), 30px);
+}
+
+.dashbord .sec4 { 
+    grid-area: 2 / 3 / 4 / 4; 
+    width: clamp(200px, calc((258 / 1440) * 100vw), 258px);
+    height: clamp(200px, calc((613 / 1440) * 100vw), 613px) ;
+    margin-top: clamp(10px, calc((77 / 1440) * 100vw), 77px) ;
+    margin-left: clamp(10px, calc((31 / 1440) * 100vw), 31px) ;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.dashbord .text1{
+    margin-top: clamp(10px, calc((41 / 1440) * 100vw), 41px) ;
+}
+//
+//
+// BARCHARTS
+//
+//
+.barchart legend {
+    width: clamp(200px, calc((835 / 1440) * 100vw), 835px);
+    padding: 
+    clamp(2px, calc((24 / 1440) * 100vw), 24px) 
+    clamp(2px, calc((26 / 1440) * 100vw), 26px) 
+    clamp(2px, calc((65 / 1440) * 100vw), 65px) 
+    clamp(2px, calc((32 / 1440) * 100vw), 32px) ;
+    display: flex;
+    justify-content: space-between;
+}
+
+.barchart legend ul {
+    display: flex;
+    gap: clamp(10px, calc((52 / 1440) * 100vw), 52px);
+}
+
+.barchart legend ul .black{
+position: relative;
+display: flex;
+align-items: center;
+
+&::before{
+    content: "";
+    position: absolute;
+    left: clamp(-20px, calc((-20 / 1440) * 100vw), -2px);
+    aspect-ratio: 1/1;
+    height: 10px;
+    background: black;
+    border-radius: 50%;
+}
+}
+
+.barchart legend ul .red{
+    position: relative;
+    display: flex;
+    align-items: center;
+    
+    &::before{
+        content: "";
+        position: absolute;
+        left: clamp(-20px, calc((-20 / 1440) * 100vw), -2px);
+        aspect-ratio: 1/1;
+        height: 10px;
+        background: #FF0101;
+        border-radius: 50%;
+    }
+    }
+
+.custom-tooltip{
+    background:#FF0000 ;
+    width: clamp(5px, calc((60 / 1440) * 100vw), 60px);
+    height: clamp(10px, calc((100 / 1440) * 100vw), 100px) ;
+    @extend %center;
+    flex-direction: column;
+    gap: clamp(1px, calc((14 / 1440) * 100vw), 14px);
+}
+//
+//
+// LINECHARTS
+//
+//
+.LineCharts{
+    position: relative;
+    background: #E60000 ;
+    width: clamp(50px, calc((258 / 1440) * 100vw), 258px);
+    height: clamp(100px, calc((263 / 1440) * 100vw), 263px) ;
+    padding: 
+    clamp(2px, calc((40 / 1440) * 100vw), 40px) 
+    clamp(2px, calc((10 / 1440) * 100vw), 10px) 
+    clamp(2px, calc((20 / 1440) * 100vw), 20px) 
+    clamp(2px, calc((10 / 1440) * 100vw), 10px) ;
+    border-radius: clamp(1px, calc((5 / 1440) * 100vw), 5px);
+}
+
+.LineCharts::before{
+    content: "Durée moyenne des sessions";
+    position: absolute;
+    color: rgba(255,255,255,0.5);
+    font-size: clamp(2px, calc((15 / 1440) * 100vw), 15px);
+    width: clamp(20px, calc((160 / 1440) * 100vw), 160px);
+    top: clamp(2px, calc((29 / 1440) * 100vw), 29px);
+    left: clamp(2px, calc((34 / 1440) * 100vw), 34px);
+}
+.custom-tooltip-line{
+    background:white;
+    width: clamp(5px, calc((60 / 1440) * 100vw), 60px);
+    height: clamp(10px, calc((40 / 1440) * 100vw), 40px) ;
+    @extend %center;
+    flex-direction: column;
+    gap: clamp(1px, calc((14 / 1440) * 100vw), 14px);
+    z-index: 10;
+}
+//
+//
+// RADARCHARTS
+//
+//
+.RadarCharts{
+    position: relative;
+    background: #282D30 ;
+    width: clamp(50px, calc((258 / 1440) * 100vw), 258px);
+    height: clamp(100px, calc((263 / 1440) * 100vw), 263px) ;
+    @extend %center;
+    border-radius: clamp(1px, calc((5 / 1440) * 100vw), 5px);
+}
+.RadarCharts text{
+    font-size: clamp(2px, calc((11 / 1440) * 100vw), 11px);
+    text-transform: capitalize;
+}
+//
+//
+// RADIALBARCHARTS
+//
+//
+.RadialBarCharts{
+    position: relative;
+    background: #FBFBFB ;
+    width: clamp(50px, calc((258 / 1440) * 100vw), 258px);
+    height: clamp(100px, calc((263 / 1440) * 100vw), 263px) ;
+    @extend %center;
+    border-radius: clamp(1px, calc((5 / 1440) * 100vw), 5px);
+}
+.RadialBarCharts .score{
+    position: absolute;
+    top: clamp(1px, calc((24 / 1440) * 100vw), 24px);
+    left: clamp(1px, calc((30 / 1440) * 100vw), 30px); 
+}
+.RadialBarCharts .pourcent{
+    position: absolute;
+    @extend %center;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+}
+.RadialBarCharts .pourcent .objectif{
+    width: clamp(10px, calc((75 / 1440) * 100vw), 75px);
+    text-align: center;
+    line-height: clamp(5px, calc((26 / 1440) * 100vw), 26px);
+    margin-top: clamp(5px, calc((8 / 1440) * 100vw), 8px);
+}

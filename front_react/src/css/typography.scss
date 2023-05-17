@@ -1,0 +1,73 @@
+.text-1xl{
+    font-size: clamp(5px, calc((48 / 1440) * 100vw), 48px) ;
+    line-height: clamp(5px, calc((24 / 1440) * 100vw), 24px) ;
+    letter-spacing: 0.01em ;
+    font-weight: 500;
+}
+.text-2xl{
+    font-size: clamp(5px, calc((26 / 1440) * 100vw), 26px) ;
+    line-height: clamp(5px, calc((24 / 1440) * 100vw), 24px) ;
+    letter-spacing: 0.01em ;
+    font-weight: 700;
+}
+.text-3xl{
+    font-size: clamp(5px, calc((24 / 1440) * 100vw), 24px) ;
+    line-height: clamp(5px, calc((24 / 1440) * 100vw), 24px) ;
+    letter-spacing: 0.01em ;
+    font-weight: 500;
+}
+.text-4xl{
+    font-size: clamp(5px, calc((20 / 1440) * 100vw), 20px) ;
+    line-height: clamp(5px, calc((24 / 1440) * 100vw), 24px) ;
+    letter-spacing: 0.01em ;
+    font-weight: 700;
+}
+.text-5xl{
+    font-size: clamp(5px, calc((18 / 1440) * 100vw), 18px) ;
+    line-height: clamp(5px, calc((24 / 1440) * 100vw), 24px) ;
+    letter-spacing: 0.01em ;
+    font-weight: 400;
+}
+.text-6xl{
+    font-size: clamp(5px, calc((15 / 1440) * 100vw), 15px) ;
+    line-height: clamp(5px, calc((24 / 1440) * 100vw), 24px) ;
+    letter-spacing: 0.01em ;
+    font-weight: 700;
+}
+.text-7xl{
+    font-size: clamp(5px, calc((14 / 1440) * 100vw), 14px) ;
+    line-height: clamp(5px, calc((24 / 1440) * 100vw), 24px) ;
+    font-weight: 500;
+}
+.text-8xl{
+    font-size: clamp(5px, calc((12 / 1440) * 100vw), 12px) ;
+    line-height: clamp(5px, calc((24 / 1440) * 100vw), 24px) ;
+    font-weight: 500;
+}
+.text-9xl{
+    font-size: clamp(5px, calc((7 / 1440) * 100vw), 7px) ;
+    line-height: clamp(5px, calc((24 / 1440) * 100vw), 24px) ;
+    font-weight: 500;
+}
+
+
+
+.text-black{
+    color: black;
+}
+
+.text-white{
+  color: white;
+}
+
+.text-red{
+    color: #FF0101;
+}
+
+.text-c1{
+    color: #20253A;
+}
+
+.text-c2{
+    color: #74798C;
+}
