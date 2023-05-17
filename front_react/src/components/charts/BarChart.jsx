@@ -9,18 +9,9 @@ import {
 } from "recharts";
 import { Typo } from "../build/typography";
 
-interface Props {
-  data:
-    | {
-        day: string;
-        kilogram: number;
-        calories: number;
-        value: number;
-      }[]
-    | null;
-}
 
-export const BarCharts = ({ data }: Props) => {
+
+export const BarCharts = ( {data} ) => {
   if (data) {
     return (
       <>
@@ -79,15 +70,9 @@ export const BarCharts = ({ data }: Props) => {
   return null;
 };
 
-interface payloadProps {
-  payload:
-    | {
-        value: number;
-      }[]
-    | null;
-}
 
-const CustomTooltip = ({ payload }: payloadProps) => {
+
+const CustomTooltip = ( payload ) => {
   if (payload && payload.length && payload !== null) {
     return (
       <div className="custom-tooltip">

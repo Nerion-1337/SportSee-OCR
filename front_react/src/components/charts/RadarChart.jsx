@@ -8,22 +8,7 @@ import {
 } from "recharts";
 
 
-
-
-interface Props {
-      data:{
-        value: number;
-        kind: string;
-        }[] | null;
-}
-
-
-
-
-
-
-
-export const RadarCharts = ({ data }: Props) => {
+export const RadarCharts = ( {data} ) => {
   if (data) {
     
     return (

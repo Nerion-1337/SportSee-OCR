@@ -1,16 +1,11 @@
 import clsx from "clsx";
 
-interface Props {
-  className?: string;
-  children: React.ReactNode;
-  onClick?: () => void;
-}
 
-export const Button = ({
-  onClick,
+export const Button = (
+{  onClick,
   className,
-  children,
-}: Props) => {
+  children,}
+) => {
 
   const classStyles = "button text-3xl";
 

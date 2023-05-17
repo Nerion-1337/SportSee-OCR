@@ -5,11 +5,9 @@ import {
   USER_PERFORMANCE,
 } from "../mock/data";
 
-interface Props {
-  id: string;
-}
 
-export async function Data_id({ id }: Props) {
+
+export async function Data_id( id ) {
   const userId = parseInt(id, 10);
   const server = `http://localhost:3000/user/${userId}`;
 //

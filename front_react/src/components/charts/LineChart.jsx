@@ -9,20 +9,10 @@ import {
 } from "recharts";
 import { Typo } from "../build/typography";
 
-interface Props {
-  data:
-    | {
-        day: number;
-        sessionLength: number;
-        dayString: string;
-        value: number;
-      }[]
-    | null;
-}
 
-export const LineCharts = ({ data }: Props) => {
+
+export const LineCharts = ( {data} ) => {
   if (data) {
-    console.log(data)
     return (
       <article className="LineCharts">
         <ResponsiveContainer width="100%" height="100%">
@@ -81,15 +71,8 @@ export const LineCharts = ({ data }: Props) => {
   return null;
 };
 
-interface payloadProps {
-  payload:
-    | {
-        value: number;
-      }[]
-    | null;
-}
 
-const CustomTooltip = ({ payload }: payloadProps) => {
+const CustomTooltip = ( payload ) => {
   if (payload && payload.length && payload !== null) {
     return (
       <div className="custom-tooltip-line">

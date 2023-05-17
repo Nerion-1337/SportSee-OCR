@@ -1,11 +1,8 @@
 import { RadialBar, RadialBarChart,  ResponsiveContainer, } from "recharts";
 import { Typo } from "../build/typography";
 
-interface Props {
-  data?: number | null;
-}
 
-export const RadialBarCharts = ({ data }: Props) => {
+export const RadialBarCharts = ( {data} ) => {
   if (data) {
     const percentageValue = data * 100;
     const valueData = [{ value: data * 100 }];

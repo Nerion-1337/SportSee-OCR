@@ -17,61 +17,25 @@ import {Loader} from "../components/loader";
 
 export default function Dashbord() {
   //
-  const { id }: { id?: string | null } = useParams();
+  const {id} = useParams();
   //
   //
-  const [user, setUser] = useState<{
-    userInfos: { firstName: string };
-    todayScore?: number;
-    keyData: {
-      calorieCount: number;
-      proteinCount: number;
-      carbohydrateCount: number;
-      lipidCount: number;
-    };
-  } | null>(null);
+  const [user, setUser] = useState(null);
   //
   //
-  const [activity, setActivity] = useState<
-    | {
-        day: string;
-        kilogram: number;
-        calories: number;
-        value: number;
-      }[]
-    | null
-  >(null);
+  const [activity, setActivity] = useState(null);
   //
   //
-  const [average, setAverage] = useState<
-    | {
-        day: number;
-        sessionLength: number;
-        dayString: string;
-        value: number;
-      }[]
-    | null
-  >(null);
+  const [average, setAverage] = useState(null);
   //
   //
-  const [performance, setPerformance] = useState<
-    | {
-           data:{
-    value: number;
-    kind: string;
-    }[];
-    kind:{
-        key: string;
-    }  
-      }
-    | null
-  >(null);
+  const [performance, setPerformance] = useState(null);
   //
   //
   useEffect(() => {
     const fetchData = async () => {
       if (id) {
-        const result = await Data_id({ id });
+        const result = await Data_id(id);
         setUser(userData(result.userData));
         setActivity(activityDataTerra(result.activityData.sessions));
         setAverage(averageDataTerra(result.averageData.sessions));

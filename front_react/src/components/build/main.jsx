@@ -1,14 +1,9 @@
 import clsx from "clsx";
 
-interface Props {
-  className?: string;
-  children?: React.ReactNode;
-}
-
-export const Main = ({
-  className,
-  children,
-}: Props) => {
+export const Main = (
+{  className,
+  children,}
+) => {
  
     const classStyle = "main";
 

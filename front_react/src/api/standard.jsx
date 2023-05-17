@@ -1,16 +1,4 @@
-interface UserdData {
-        userInfos: { firstName: string };
-        todayScore?: number;
-        score?: number;
-        keyData: {
-          calorieCount: number;
-          proteinCount: number;
-          carbohydrateCount: number;
-          lipidCount: number;
-  }
-}
-
-export const userData = (data: UserdData) =>{
+export const userData = (data) =>{
     if (data && "score" in data) {
         data.todayScore = data.score;
       setTimeout(() => {
@@ -22,14 +10,7 @@ export const userData = (data: UserdData) =>{
 //
 //
 //
-interface ActivityData {
-  day: string;
-  kilogram: number;
-  calories: number;
-  value: number;
-}
-
-export const activityDataTerra = (data: ActivityData[] | null) => {
+export const activityDataTerra = (data) => {
   if (data) {
     data.forEach((session) => {
       const day = session.day.slice(-1);
@@ -41,14 +22,8 @@ export const activityDataTerra = (data: ActivityData[] | null) => {
 //
 //
 //
-interface AverageData {
-    day: number;
-    sessionLength: number;
-    dayString: string;
-    value: number;
-  }
-  
-  export const averageDataTerra = (data: AverageData[] | null) => {
+
+  export const averageDataTerra = (data) => {
     const joursSemaine = ["L", "M", "M", "J", "V", "S", "D"];
     if (data) {
         data.forEach((session) => {
@@ -63,17 +38,7 @@ interface AverageData {
 //
 //
 //
-  interface PerformanceData {
-    data:{
-    value: number;
-    kind: string;
-    }[];
-    kind:{
-        key: string;
-    }
-  }
-  
-  export const performanceDataTerra = (data: PerformanceData | null) => {
+  export const performanceDataTerra = (data) => {
     if (data) {
         data.data.forEach((item) => {
           const kindEntry = Object.entries(data.kind).find(

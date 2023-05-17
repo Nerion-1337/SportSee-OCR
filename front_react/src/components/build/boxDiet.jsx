@@ -1,14 +1,8 @@
 import clsx from "clsx";
 import { Typo } from "./typography";
 
-interface Props {
-  name: string;
-  img: string;
-  data: string;
-  className?: string;
-}
 
-export const BoxDiet = ({ name, img, data, className }: Props) => {
+export const BoxDiet = ( {name, img, data, className} ) => {
   const classStyles = "boxdiet";
 
   return (

@@ -1,21 +1,13 @@
 import clsx from "clsx";
 
-interface Props {
-  variant?: "h1" | "h2" | "h3" | "h4" | "h5" | "h6" | "h7" | "h8" | "h9";
-  balise?: "h1" | "h2" | "h3" | "h4" | "h5" | "div" | "p" | "li" | "span";
-  color?: "black" | "white" | "red" | "C1" | "C2";
-  className?: string;
-  children: React.ReactNode;
-}
-
-export const Typo = ({
+export const Typo = ({  
   variant = "h6",
   balise: Balise = "div",
   color = "black",
   //className dans le cas où on veux ajouter des styles spécifique
   className,
   children,
-}: Props) => {
+}) => {
   let variantStyles = "";
   let colorStyles = "";
 
