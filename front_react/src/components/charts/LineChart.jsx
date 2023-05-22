@@ -72,7 +72,7 @@ export const LineCharts = ( {data} ) => {
 };
 
 
-const CustomTooltip = ( payload ) => {
+const CustomTooltip = ( {payload} ) => {
   if (payload && payload.length && payload !== null) {
     return (
       <div className="custom-tooltip-line">

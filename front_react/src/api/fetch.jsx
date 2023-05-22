@@ -10,11 +10,13 @@ import {
 export async function Data_id( id ) {
   const userId = parseInt(id, 10);
   const server = `http://localhost:3000/user/${userId}`;
+
+
 //
-//  
+//
   try {
 //
-//    
+//   
     const fetchUserData = async () => {
       const response = await fetch(`${server}`);
       const userData = await response.json();
@@ -64,11 +66,14 @@ export async function Data_id( id ) {
 
     const allData = Object.assign({}, ...allFetch);
 
-    //console.log(allData)
     return allData;
+
 //
 //    
   } catch {
+//
+//    
+alert("La connexion au serveur n'a pu être réalisée, utilisation de donnée mock !");
 //
 //
     const userMainData = Array.isArray(USER_MAIN_DATA) ? USER_MAIN_DATA : [];
@@ -81,14 +86,12 @@ export async function Data_id( id ) {
 //
 //
     const averageMainData = Array.isArray(USER_AVERAGE_SESSIONS)
-      ? USER_AVERAGE_SESSIONS
-      : [];
+      ? USER_AVERAGE_SESSIONS : [];
     const averageData = averageMainData.find((item) => item.userId === userId);
 //
 //
     const performanceMainData = Array.isArray(USER_PERFORMANCE)
-      ? USER_PERFORMANCE
-      : [];
+      ? USER_PERFORMANCE : [];
     const performanceData = performanceMainData.find(
       (item) => item.userId === userId
     );
@@ -102,7 +105,6 @@ export async function Data_id( id ) {
     };
 //
 //
-    //console.log(allData);
     return allData;
   }
 }

@@ -12,7 +12,7 @@ import { BarCharts } from "../components/charts/BarChart";
 import { LineCharts } from "../components/charts/LineChart";
 import { RadarCharts } from "../components/charts/RadarChart";
 import { RadialBarCharts } from "../components/charts/RadialBarChart";
-import {userData, activityDataTerra, averageDataTerra, performanceDataTerra} from "../api/standard";
+import {Standard} from "../api/standard";
 import {Loader} from "../components/loader";
 
 export default function Dashbord() {
@@ -20,36 +20,24 @@ export default function Dashbord() {
   const {id} = useParams();
   //
   //
-  const [user, setUser] = useState(null);
-  //
-  //
-  const [activity, setActivity] = useState(null);
-  //
-  //
-  const [average, setAverage] = useState(null);
-  //
-  //
-  const [performance, setPerformance] = useState(null);
+  const [data, setData] = useState(null);
   //
   //
   useEffect(() => {
     const fetchData = async () => {
       if (id) {
-        const result = await Data_id(id);
-        setUser(userData(result.userData));
-        setActivity(activityDataTerra(result.activityData.sessions));
-        setAverage(averageDataTerra(result.averageData.sessions));
-        setPerformance(performanceDataTerra(result.performanceData));
+        const result = await Data_id(id);       
+        setData( new Standard(result).standardfunction());
       }
     };
     fetchData();
   }, [id]);
   //
   //
-  if (user && activity && average && performance) {
-    
-    const name = user.userInfos.firstName;
-
+  if (data) {
+  //  
+    const name = data[0].userInfos.firstName;
+//
     return (
       <>
         <Main className="dashbord">
@@ -63,34 +51,34 @@ export default function Dashbord() {
           </section>
 
           <section className="barchart">
-            <BarCharts data={activity} />
+            <BarCharts data={data[1]} />
           </section>
 
           <section className="sec3">
-            <LineCharts data={average} />
-            <RadarCharts data={performance.data} />
-            <RadialBarCharts data={user.todayScore} />
+            <LineCharts data={data[2]} />
+            <RadarCharts data={data[3].data} />
+            <RadialBarCharts data={data[0].todayScore} />
           </section>
 
           <aside className="sec4">
             <BoxDiet
               name="Calories"
-              data={user.keyData.calorieCount + "kCal"}
+              data={data[0].keyData.calorieCount + "kCal"}
               img={calorie}
             />
             <BoxDiet
               name="Proteines"
-              data={user.keyData.proteinCount + "g"}
+              data={data[0].keyData.proteinCount + "g"}
               img={prot}
             />
             <BoxDiet
               name="Glucides"
-              data={user.keyData.carbohydrateCount + "g"}
+              data={data[0].keyData.carbohydrateCount + "g"}
               img={gluc}
             />
             <BoxDiet
               name="Lipides"
-              data={user.keyData.lipidCount + "g"}
+              data={data[0].keyData.lipidCount + "g"}
               img={lip}
             />
           </aside>
