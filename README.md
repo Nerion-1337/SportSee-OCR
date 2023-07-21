@@ -5,7 +5,6 @@ Project de formation chez OpenClassRoom.
 # Langage solicité
 
 - SASS
-- JS
 - REACT || NEXT
 - TYPESCRIPT
 - TAILWIND
