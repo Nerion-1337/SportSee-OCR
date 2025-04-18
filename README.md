@@ -17,7 +17,7 @@ Project de formation chez OpenClassRoom.
 
 # Maquette
 
-[Canevas](https://www.figma.com/file/BMomGVZqLZb811mDMShpLu/UI-design-Sportify-FR?type=design&node-id=0-1&t=nzYOKmlpe47EtT50-0)
+[Figma](https://www.figma.com/file/BMomGVZqLZb811mDMShpLu/UI-design-Sportify-FR?type=design&node-id=0-1&t=nzYOKmlpe47EtT50-0)
 
 # Visiter
 
